@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as v;
+
+header {
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+}
+.upper-header ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  border-bottom: 1px solid var(--pip-boy-primary-color);
+  cursor: pointer;
+}
+
+.header ul li {
+  cursor: pointer;
+}
+
+
+.upper-header ul li a {
+  text-align: center;
+  background-color: #1F261E;
+  position: relative;
+  padding: 0px 10px;
+  
+}
+
+.upper-header ul .tab-active {
+  position: relative;
+}
+
+.upper-header ul .tab-active::before {
+  content: ' ';
+  width: 120%;
+  height: 22px;
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  border: 1px solid var(--pip-boy-primary-color);
+  border-bottom: 2px solid #1F261E;
+}
+
+
+.sub-header-stat {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 10px 0px 0px 0px 
+}
+
+.tabs, .sub-tabs {
+  display: flex;
+  align-items: center;
+}
+
+
+.tabs li > a,
+.sub-tabs li > a {
+  font-size: 2.2rem;
+  color: var(--pip-boy-primary-color);
+}
+
+
+.sub-tabs {
+  display: none; //only the .sub-tabs-active should be displayed
+}
+
+.sub-tabs-active {
+  display: flex;
+  align-items: center;
+}
+
+.sub-tabs li > a {
+  margin-right: 0.8rem;
+}

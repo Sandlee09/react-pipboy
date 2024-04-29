@@ -1,0 +1,128 @@
+.scan{
+  width:100%;
+  height:80px;
+  background:linear-gradient(rgba(0,0,0,0),#7ff12a);
+  position:absolute;
+  animation:scan;
+  animation-duration:4s;
+  animation-iteration-count: infinite;
+  top:-85px;
+  z-index:99;
+  opacity:0.25;
+}
+
+
+.crt-effect {
+  animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+  0% {
+    opacity: 0.97;
+  }
+  5% {
+    opacity: 0.72;
+  }
+  10% {
+    opacity: 0.98;
+  }
+  15% {
+    opacity: 0.78;
+  }
+  20% {
+    opacity: 0.94;
+  }
+  25% {
+    opacity: 0.68;
+  }
+  30% {
+    opacity: 0.82;
+  }
+  35% {
+    opacity: 0.69;
+  }
+  40% {
+    opacity: 0.93;
+  }
+  45% {
+    opacity: 0.74;
+  }
+  50% {
+    opacity: 0.88;
+  }
+  55% {
+    opacity: 0.65;
+  }
+  60% {
+    opacity: 0.96;
+  }
+  65% {
+    opacity: 0.71;
+  }
+  70% {
+    opacity: 0.83;
+  }
+  75% {
+    opacity: 0.67;
+  }
+  80% {
+    opacity: 0.92;
+  }
+  85% {
+    opacity: 0.77;
+  }
+  90% {
+    opacity: 0.89;
+  }
+  95% {
+    opacity: 0.73;
+  }
+  100% {
+    opacity: 0.98;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow: 0px 0px 5px 0px red;
+  }
+  5% {
+    box-shadow: 0px 0px 30px 2px red;
+  }
+  10% {
+    box-shadow: 0px 0px 30px 2px red;
+  }
+  15% {
+    box-shadow: 0px 0px 30px 2px red;
+  }
+  20% {
+    box-shadow: 0px 0px 5px 0px red;
+  }
+  25% {
+    box-shadow: 0px 0px 30px 2px red;
+  }
+  100% {
+    box-shadow: 0px 0px 5px 0px red;
+  }
+}
+
+@keyframes meter {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 500px;
+  }
+}
