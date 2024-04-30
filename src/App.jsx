@@ -25,10 +25,10 @@ function App({children}) {
                 <div class="upper-header">
                     <ul class="tabs">
                         <li class={`${path.includes('stat-status') && "tab-active"}`}><a onClick={() => navigate('/stat-status')} >STAT</a></li>
-                        <li class={`${path.includes('exp-jobs-section') && "tab-active"}`}><a onClick={() => navigate('/exp-jobs-section')}>EXP</a></li>
+                        <li class={`${path.includes('exp-jobs-section') && "tab-active"}`}><a onClick={() => navigate('/exp-jobs-section')}>INV</a></li>
                         <li class={`${path.includes('data-section') && "tab-active"}`}><a onClick={() => navigate('/data-section')}>DATA</a></li>
                         <li class={`${path.includes('map-section') && "tab-active"}`}><a onClick={() => navigate('/map-section')}>MAP</a></li>
-                        <li class={`${path.includes('color-section') && "tab-active"}`}><a onClick={() => navigate('/color-section')}>COLOR</a></li>
+                        <li class={`${path.includes('color-section') && "tab-active"}`}><a onClick={() => navigate('/color-section')}>RADIO</a></li>
                     </ul>
                 </div>
                 <div>

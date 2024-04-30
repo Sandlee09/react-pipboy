@@ -72,6 +72,7 @@ body {
     0 0 / 100% 4px; /* adjust the spacing (4px) as per your desired scan line thickness */
   background-repeat: repeat;
   border-radius: 7rem;
+  overflow: hidden;
 }
 
 .container { display:block; }

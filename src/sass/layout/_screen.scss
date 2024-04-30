@@ -3,11 +3,10 @@
   position: relative;
   width: 70vw;
   max-width: 600px;
-  max-height: 350px;
-  height: 90vh;
+  max-height: 375px;
+  height: 100vh;
   display: flex;
   align-items: center;
-  padding: 3rem 0px;
   flex-direction: column;
   overflow: hidden;
   border-radius: 7rem;
@@ -45,7 +44,9 @@
 
 .core-display-active {
   display: flex;
-  max-width: 37.8rem;
+  flex-direction: column;
+  max-width: 100%;
   height: fit-content;
   justify-content: center;
+  gap: 4rem;
 }

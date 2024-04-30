@@ -1,1 +1,0 @@
-import{j as t}from"./index-g27q8_q3.js";const a="/assets/vault_boy_walking-yUSUUFzA.gif",i=()=>t.jsx("section",{class:"core-display core-display-active",id:"stat-status-section",children:t.jsx("div",{class:"vault-boy-container",children:t.jsx("img",{id:"vault-boy-walking",src:a,alt:"a fallout vault boy walking"})})});export{i as default};

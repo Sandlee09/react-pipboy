@@ -2,10 +2,12 @@
 @use "../abstracts/mixins";
 
 .info-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: v.$header-width*1rem;
+  width: fit-content;
+  margin: auto;
   margin-top: -2rem;
 }
 
@@ -22,10 +24,13 @@
 .info-icon {
   background-color: var(--pip-boy-secondary-color);
   margin-right: 0.4rem;
+  padding: 3px 4px;
+  border-radius: 1px;
 }
 
 .info-icon > p {
   color: var(--pip-boy-primary-color);
+  font-weight: 600;
 }
 
 .info-icon-large {
@@ -70,4 +75,93 @@
   text-align: center;
   width: v.$header-width*1rem;
   margin: 1rem;
+}
+
+.active-items-bar-container {
+  position: fixed;
+  bottom: 28px;
+  left: 0px;
+  width: fit-content;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+}
+
+.active-item-bar {
+  padding: 3px 10px;
+  background-color: rgb(54, 109, 16);
+  font-size: 14px;
+  font-weight: 700;
+  width: fit-content;
+  min-width: fit-content;
+  display: flex;
+  gap: 10px;
+}
+
+.active-item-bar p {
+  color: rgb(33, 71, 5)!important;
+}
+
+.info-bar-container {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.info-bar {
+  padding: 3px 10px;
+  background-color: #103A0F;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--pip-boy-primary-color);
+  display: flex;
+  gap: 10px;
+}
+
+.progressBar {
+  border: 1px solid var(--pip-boy-primary-color);
+  width: 100%;
+  height: 10px;
+}
+
+.progressBarPercentage {
+  background-color: var(--pip-boy-primary-color);
+  width: 80%;
+  height: 8px;
+}
+
+
+
+// VAULT BOY
+
+.vault-boy-top-container {
+  width: 40px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.vault-boy-middle-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.vault-boy-left-container, .vault-boy-right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+}
+
+.vault-boy-middle-container div .progressBar, .vault-boy-top-container .progressBar {
+  height: 5px;
+}
+
+.vault-boy-middle-container div .progressBarPercentage, .vault-boy-top-container div .progressBarPercentage{
+  height: 4px;
 }
