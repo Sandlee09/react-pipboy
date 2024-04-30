@@ -15,9 +15,9 @@ function App({children}) {
   return (
     <>
       <div class="container">
-    <div class="overlay-container">
+    {/* <div class="overlay-container">
         <img id="overlay" src="img/pip-boy_overlay.png" />
-    </div>
+    </div> */}
     <div class="screen crt-effect">
             <div class="screen-reflection"></div>
             <div class="scan"></div>

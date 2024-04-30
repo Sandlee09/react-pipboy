@@ -8,10 +8,11 @@ header {
 .upper-header ul {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
   width: 100%;
   border-bottom: 1px solid var(--pip-boy-primary-color);
   cursor: pointer;
+  padding-bottom: 6px;
 }
 
 .header ul li {
@@ -20,11 +21,13 @@ header {
 
 
 .upper-header ul li a {
+  margin-bottom: 15px;
   text-align: center;
-  background-color: #1F261E;
+  background-color: #0F160E;
   position: relative;
   padding: 0px 10px;
-  
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .upper-header ul .tab-active {
@@ -39,7 +42,7 @@ header {
   top: 40%;
   left: -10%;
   border: 1px solid var(--pip-boy-primary-color);
-  border-bottom: 2px solid #1F261E;
+  border-bottom: 2px solid #0F160E;
 }
 
 
@@ -59,10 +62,13 @@ header {
 
 .tabs li > a,
 .sub-tabs li > a {
-  font-size: 2.2rem;
   color: var(--pip-boy-primary-color);
 }
 
+.sub-tabs li > a {
+  font-size: 18px;
+  font-weight: 600;
+}
 
 .sub-tabs {
   display: none; //only the .sub-tabs-active should be displayed
@@ -71,6 +77,9 @@ header {
 .sub-tabs-active {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  margin: 0px 10vw;
+  margin-bottom: 25px;
 }
 
 .sub-tabs li > a {

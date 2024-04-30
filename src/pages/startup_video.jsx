@@ -6,7 +6,6 @@ const StartupVideo = () => {
     useEffect(() => {
        
         var video = document.getElementById('video');
-        console.log(video)
         video.play();
         video.addEventListener('ended',function(){
             window.location = '/stat-status';
