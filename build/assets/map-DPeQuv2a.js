@@ -1,0 +1,1 @@
+import{j as s}from"./index-Brvkil3u.js";const a="/assets/idf_map-Wb1LtmOl.png",n=()=>s.jsx("section",{class:"core-display",id:"map-section",children:s.jsx("div",{class:"menu-container map-container",children:s.jsx("img",{src:a,id:"idf-map",alt:"a map of Ile-de-France french region"})})});export{n as default};

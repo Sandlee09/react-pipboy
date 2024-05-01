@@ -14,10 +14,10 @@ const StartupVideo = () => {
     })
 
     return (
-    <section class="core-display" id="stat-status-section">
-        <div class="screen crt-effect">
-            <div class="screen-reflection screen-reflection-black"></div>
-            <div class="scan"></div>
+    <section className="core-display" id="stat-status-section">
+        <div className="screen crt-effect">
+            <div className="screen-reflection screen-reflection-black"></div>
+            <div className="scan"></div>
 
             <video id="video"  autoPlay muted="muted">
             <source src={StartVideo} type="video/mp4" />

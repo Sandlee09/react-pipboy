@@ -8,6 +8,7 @@ export const ExpJobs = lazy(() => import('../pages/exp_jobs.jsx'));
 export const Maps = lazy(() => import('../pages/map.jsx'));
 export const ColorSettings = lazy(() => import('../pages/colors.jsx'));
 export const StartupVideo = lazy(() => import('../pages/startup_video.jsx'));
+export const Radio = lazy(() => import('../pages/radio.jsx'));
 // ----------------------------------------------------------------------
 
 export default function Router() {
@@ -25,6 +26,7 @@ export default function Router() {
         { path: 'stat-status', element: <StatStatus /> },
         { path: 'exp-jobs-section', element: <ExpJobs /> },
         { path: 'map-section', element: <Maps /> },
+        { path: 'radio', element: <Radio /> },
         { path: 'color-section', element: <ColorSettings /> },
       ],
     },

@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+.radio-container {
+  width: 68vw;
+  display: flex;
+  height: 70vh;
+  margin-top: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.radio-stations-container {
+  flex: 1;
+  width: 100px;
+}
+
+.radio-stations-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.radio-stations-container ul li {
+  cursor: pointer;
+  padding: 5px 10px;
+  color: var(--pip-boy-primary-color);
+  font-weight: 700;
+  font-size: 14px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.radio-stations-container ul .active {
+  border: 2px solid var(--pip-boy-primary-color);
+  background-color: #103A0F;
+}
+
+.radio-waves-container {
+  flex: 1;
+}
+
+.selectedRadioIcon {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+.activeRadioIcon {
+  background-color: var(--pip-boy-primary-color);
+}

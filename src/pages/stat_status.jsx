@@ -53,8 +53,8 @@ const StatStatus = () => {
     console.log(currentTime)
 
     return (
-    <section class="core-display core-display-active" id="stat-status-section">
-        <div class="vault-boy-container">
+    <section className="core-display core-display-active" id="stat-status-section">
+        <div className="vault-boy-container">
             <div className='vault-boy-top-container'>
                     <div className="progressBar">
                         <div className="progressBarPercentage" style={{width: `${appendiges.head}%`}}/>
@@ -82,35 +82,35 @@ const StatStatus = () => {
             </div>
            
         </div>
-        {/* <div class="health-gauge-container">
-            <div class="health-gauge health-gauge-top"></div>
-            <div class="health-gauge health-gauge-right-top"></div>
-            <div class="health-gauge health-gauge-right-bottom"></div>
-            <div class="health-gauge health-gauge-bottom"></div>
-            <div class="health-gauge health-gauge-left-bottom"></div>
-            <div class="health-gauge health-gauge-left-top"></div>
+        {/* <div className="health-gauge-container">
+            <div className="health-gauge health-gauge-top"></div>
+            <div className="health-gauge health-gauge-right-top"></div>
+            <div className="health-gauge health-gauge-right-bottom"></div>
+            <div className="health-gauge health-gauge-bottom"></div>
+            <div className="health-gauge health-gauge-left-bottom"></div>
+            <div className="health-gauge health-gauge-left-top"></div>
         </div> */}
-        <div class="info-container">
-            <div class="info-icon info-icon-large info-icon-brackets">
+        <div className="info-container">
+            <div className="info-icon info-icon-large info-icon-brackets">
                 <img src={gun} alt="brackets"/>
             </div>
-            <div class="info-icon info-icon-thin info-icon-java-container">
+            <div className="info-icon info-icon-thin info-icon-java-container">
                 <img src={crosshair} alt="java programming language logo"/>
                 <p>13</p>
             </div>
-            <div class="info-icon info-icon-large info-icon-web">
+            <div className="info-icon info-icon-large info-icon-web">
                 <img src={helmet} alt="web application icon"/>
             </div>
-            <div class="info-icon info-icon-thin info-icon-spring">
+            <div className="info-icon info-icon-thin info-icon-spring">
                 <img src={armor} alt="spring framework logo"/>
                 <p>16</p>
             </div>
-            <div class="info-icon info-icon-thin info-icon-diagram">
+            <div className="info-icon info-icon-thin info-icon-diagram">
                 <img src={lightning}
                      alt="a diagram icon that symbolises databases conception"/>
                 <p>7</p>
             </div>
-            <div class="info-icon info-icon-thin info-icon-security">
+            <div className="info-icon info-icon-thin info-icon-security">
                 <img src={radiation} alt="web security icon"/>
                 <p>5</p>
             </div>
