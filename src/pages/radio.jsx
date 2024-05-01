@@ -1,8 +1,6 @@
 
 import { useEffect, useState, useRef } from 'react'
-import AudioSpectrum from "react-audio-spectrum";
 import RadioGraph from '../components/radiowaves'
-import { AudioVisualizer } from 'react-audio-visualize';
 import {getFileName,  blackMountainSongs, newVegasSongs, mojaveSongs, mysteriousBroadcastSongs, ulfSongs, sierraMadreSongs } from '../utils/music'
 
 const Radio = () => {
