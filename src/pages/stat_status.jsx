@@ -1,5 +1,6 @@
 
 import vault_boy_walking from '../img/vault_boy_walking.gif'
+import kamikaze from "../img/vault-boy/kamikaze.gif"
 import brackets from '../img/brackets.png'
 import java_logo from "../img/java_logo.png"
 import python_logo from "../img/python_logo.png"
@@ -70,7 +71,8 @@ const StatStatus = () => {
                     </div>
                 </div>
                 <img id="vault-boy-walking"
-                 src={vault_boy_walking} alt="a fallout vault boy walking"/>
+                 src={vault_boy_walking} 
+                 alt="a fallout vault boy walking"/>
                 <div className='vault-boy-right-container'>
                 <div className="progressBar">
                         <div className="progressBarPercentage" style={{width: `${appendiges.rightArm}%`}}/>
