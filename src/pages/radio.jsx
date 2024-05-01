@@ -23,7 +23,14 @@ const Radio = () => {
         setCurrentStation(key)
     }
 
-    useEffect(() => {console.log(currentStation)}, [currentStation])
+    const generateRandom = (min, max) => {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    useEffect(() => {
+        setRadioSettings()
+
+    }, [currentStation])
 
     return (
     <section className="core-display core-display-active" id="stat-status-section">
