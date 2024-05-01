@@ -4,7 +4,6 @@ import RadioGraph from '../components/radiowaves'
 import {getFileName,  blackMountainSongs, newVegasSongs, mojaveSongs, mysteriousBroadcastSongs, ulfSongs, sierraMadreSongs } from '../utils/music'
 
 const Radio = () => {
-    const visualizerRef = useRef(null)
     const [currentStation, setCurrentStation] = useState(0)
     const [currentSong, setCurrentSong] = useState()
     const [radioSettings, setRadioSettings] = useState({
@@ -64,7 +63,11 @@ const Radio = () => {
                 song = mysteriousBroadcastSongs[rand]
             }
 
-            setCurrentSong(song)
+            setCurrentSong(null)
+            setTimeout(function(){
+                setCurrentSong(song)
+           }, 500); //Time before execution
+            
         }
     }, [currentStation])
 
