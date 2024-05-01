@@ -1,9 +1,12 @@
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import AudioSpectrum from "react-audio-spectrum";
 import RadioGraph from '../components/radiowaves'
+import { AudioVisualizer } from 'react-audio-visualize';
 import {getFileName,  blackMountainSongs, newVegasSongs, mojaveSongs, mysteriousBroadcastSongs, ulfSongs, sierraMadreSongs } from '../utils/music'
 
 const Radio = () => {
+    const visualizerRef = useRef(null)
     const [currentStation, setCurrentStation] = useState(0)
     const [currentSong, setCurrentSong] = useState()
     const [radioSettings, setRadioSettings] = useState({
@@ -68,7 +71,7 @@ const Radio = () => {
     }, [currentStation])
 
     useEffect(() => {
-        var audio = document.getElementById('player');
+        var audio = document.getElementById('audio-element');
         audio?.play();
     }, [currentSong])
 
@@ -100,7 +103,7 @@ const Radio = () => {
                     speed={radioSettings.speed}
                 />
                 {currentSong && 
-                <audio id="player" autoplay loop>
+                <audio id="audio-element" autoplay loop>
                     <source src={currentSong} type="audio/mp3"/>
                 </audio>}
 
