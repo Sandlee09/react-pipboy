@@ -1,0 +1,152 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+
+
+.settings-container {
+  color: green;
+  padding: 20px;
+  font-family: monospace;
+  text-align: center;
+  width: 100%!important;
+  overflow: scroll;
+}
+
+.settings-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.settings-top-border {
+  width: 90%;
+  position: absolute;
+  top: 40%;
+  height: 10px;
+  transform: translateY(-50%);
+  border: 1px solid var(--pip-boy-primary-color);
+  border-bottom: 0px;
+  z-index: -1;
+}
+
+.settings-title {
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: #0F160E;
+  position: relative;
+  padding: 0px 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.settings-subtitle {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.settings-option-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.settings-option {
+  background-color: green;
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  width: 50%;
+  margin: auto;
+}
+
+.settings-subOptions-container {
+  display: flex;
+  margin: auto;
+  gap: 10px;
+}
+
+.settings-subOption {
+  background-color: green;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.settings-bottom-border {
+  width: 90%;
+  position: absolute;
+  height: 10px;
+  border: 1px solid var(--pip-boy-primary-color);
+  border-top: 0px;
+  z-index: -1;
+  margin: auto;
+}
+
+
+// TERMINAL
+/* TerminalComponent.css */
+.terminal {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.terminal-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.terminal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-output {
+  margin-bottom: 20px;
+}
+
+.terminal-output p {
+  margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00dd00;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #00dd00;
+}

@@ -5,6 +5,9 @@ import DashboardLayout from '../App.jsx';
 
 export const Special = lazy(() => import('../pages/special.jsx'));
 export const Perks = lazy(() => import('../pages/perks.jsx'));
+export const Settings = lazy(() => import('../pages/settings.jsx'));
+export const Connections = lazy(() => import('../pages/connection.jsx'));
+export const WatchMode = lazy(() => import('../pages/watchMode.jsx'));
 export const StatStatus = lazy(() => import('../pages/stat_status.jsx'));
 export const ExpJobs = lazy(() => import('../pages/exp_jobs.jsx'));
 export const Maps = lazy(() => import('../pages/map.jsx'));
@@ -28,6 +31,7 @@ export default function Router() {
         { path: 'stat-status', element: <StatStatus /> },
         { path: 'special', element: <Special/> },
         { path: 'perks', element: <Perks/> },
+        { path: 'watch-mode', element: <WatchMode/> },
         { path: 'exp-jobs-section', element: <ExpJobs /> },
         { path: 'map-section', element: <Maps /> },
         { path: 'radio', element: <Radio /> },
@@ -37,6 +41,14 @@ export default function Router() {
     {
       path: '/',
       element: <StartupVideo />,
+    },
+    {
+      path: '/settings',
+      element: <Settings />,
+    },
+    {
+      path: '/connection',
+      element: <Connections />,
     },
   ]);
 

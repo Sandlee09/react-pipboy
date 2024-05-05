@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+.watchMode-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 10px 40px;
+  height: 90vh;
+}
+
+.watchMode-left-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  width: 30vw;
+}
+
+
+
+.watchMode-right-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 30vw;
+  filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+  justify-content: center;
+}
+
+.watchMode-right-container p {
+  font-family: fantasy;
+  font-weight: 200;
+  font-size: 15vw;
+  height: fit-content;
+  padding: 0px;
+  margin: 0px;
+  line-height: 18rem;
+  font-family: fantasy;
+  font-weight: 200;
+  font-size: 15vw;
+}
+
+.watchMode-right-container .watch-divider  {
+  width: 100%;
+  height: 10px;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  
+  margin: 20px 0px;
+}
+
+.watchMode-right-container .watch-divider div {
+  flex: 1;
+  max-width: 30%;
+  height: 100%;
+  background-color: var(--pip-boy-primary-color);
+}
+
+.watchMode-left-container img {
+  filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+}

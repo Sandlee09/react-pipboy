@@ -1,15 +1,7 @@
 
 import vault_boy_walking from '../img/vault_boy_walking.gif'
 import hungry from "../img/vault-boy/hungry.gif"
-import sleepingArmor from "../img/vault-boy/sleeping-armor.gif"
-import brackets from '../img/brackets.png'
-import java_logo from "../img/java_logo.png"
-import python_logo from "../img/python_logo.png"
-import web_application_logo from "../img/web_application_logo.png"
-import spring_logo from "../img/spring_logo.png"
-import engineering from "../img/engineering.png"
-import diagram from "../img/diagram.png"
-import security from "../img/security.png"
+import xray from "../img/vault-boy/xray.gif"
 import gun from "../img/gun.png"
 import helmet from "../img/helmet.png"
 import crosshair from "../img/dmg-physical.png"
@@ -71,7 +63,7 @@ const StatStatus = () => {
                     </div>
                 </div>
                 <img id="vault-boy-walking"
-                 src={vault_boy_walking} 
+                 src={xray} 
                  alt="a fallout vault boy walking"/>
                 <div className='vault-boy-right-container'>
                 <div className="progressBar">
