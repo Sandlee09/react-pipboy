@@ -90,63 +90,47 @@
 
 // TERMINAL
 /* TerminalComponent.css */
-.terminal {
-  background-color: #000;
-  color: #00ff00;
-  font-family: 'Courier New', Courier, monospace;
-  width: 400px;
-  margin: auto;
-  padding: 20px;
+.crt-terminal {
+  border: none!important;
+  padding: none!important;
+  background: none!important;
+  box-shadow: none!important;
+  font-size: 10px;
+  font-family: monospace;
+  padding: 20px!important;
 }
 
-.terminal-header {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
+.crt-text-word {
+  width: 100%!important;
 }
 
-.terminal-body {
+.crt-character {
+  width: 100%!important;
   display: flex;
-  flex-direction: column;
+  word-break: normal!important;
+  white-space: normal!important;
 }
 
-.terminal-output {
-  margin-bottom: 20px;
+.crt-command-line {
+  display: flex!important;
+  align-items: center!important;
 }
 
-.terminal-output p {
-  margin: 0;
+.crt-text-line {
+  font-size: 10px!important;
 }
 
-input[type="text"],
-input[type="password"],
-button {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+.crt-command-line__input-string, .crt-command-word {
+  display: flex!important;
+  align-items: center!important;
+  width: fit-content!important;
+  gap: 5px!important;
 }
 
-button {
-  background-color: #00ff00;
-  color: #000;
-  border: none;
-  cursor: pointer;
+.crt-command-line__input-string span, .crt-command-word, .crt-command-line__prompt {
+  font-size: 10px!important;
 }
 
-button:hover {
-  background-color: #00dd00;
-}
-
-input[type="text"],
-input[type="password"] {
-  background-color: #000;
-  color: #00ff00;
-  border: 1px solid #00ff00;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  border-color: #00dd00;
+.crt-terminal__overflow-container {
+  overflow: hidden!important;
 }

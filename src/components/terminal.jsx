@@ -1,46 +1,38 @@
-// TerminalComponent.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Terminal, useEventQueue, textLine, textWord, commandWord } from 'crt-terminal';
 
-const TerminalComponent = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [authenticated, setAuthenticated] = useState(false);
+const bannerText = `Welcome to Vault-Tec's Google Hacking Termninal`;
 
-  const handleLogin = () => {
-    // Authentication logic goes here
-    if (username === 'admin' && password === 'password') {
-      setAuthenticated(true);
-    } else {
-      setAuthenticated(false);
-    }
+export default function TerminalScreen() {
+  const eventQueue = useEventQueue();
+  const { print } = eventQueue.handlers;
+
+
+  const handleCommand = (command) => {
+    print([
+      textLine({
+        words: [
+          textWord({ characters: 'You entered command: ' }),
+          commandWord({ characters: command, prompt: '>' }),
+        ],
+      }),
+    ]);
   };
 
-  const handleUsernameChange = (e) => setUsername(e.target.value);
-  const handlePasswordChange = (e) => setPassword(e.target.value);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleLogin();
-  };
 
   return (
-    <div className="terminal">
-      <div className="terminal-header">Fallout Terminal</div>
-      <div className="terminal-body">
-        <div className="terminal-output">
-          {authenticated ? (
-            <p>Welcome, Admin! Access Granted.</p>
-          ) : (
-            <p>Enter username and password to continue...</p>
-          )}
-        </div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" value={username} onChange={handleUsernameChange} placeholder="Username" />
-          <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
-          <button type="submit">Login</button>
-        </form>
-      </div>
+    <div style={{ width: '100%', height: '100vh' }}>
+      <Terminal
+        printer={{
+          printerSpeed: 50,
+          charactersPerTick: 1
+        }}
+        maxHistoryCommands={5}
+        pixels={false}
+        queue={eventQueue}
+        banner={[textLine({ words: [textWord({ characters: bannerText })] })]}
+        onCommand={handleCommand}
+      />
     </div>
   );
-};
-
-export default TerminalComponent;
+}

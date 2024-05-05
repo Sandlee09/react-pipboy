@@ -2,11 +2,14 @@ import { lazy, Suspense } from 'react';
 import { Outlet, useRoutes } from 'react-router-dom';
 
 import DashboardLayout from '../App.jsx';
+import Terminal from '../components/terminal.jsx';
 
+export const UpcomingAlarm = lazy(() => import('../pages/upcomingAlarm.jsx'));
 export const Special = lazy(() => import('../pages/special.jsx'));
 export const Perks = lazy(() => import('../pages/perks.jsx'));
 export const Settings = lazy(() => import('../pages/settings.jsx'));
 export const Connections = lazy(() => import('../pages/connection.jsx'));
+export const GoogleConnections = lazy(() => import('../pages/googleConnection.jsx'));
 export const WatchMode = lazy(() => import('../pages/watchMode.jsx'));
 export const StatStatus = lazy(() => import('../pages/stat_status.jsx'));
 export const ExpJobs = lazy(() => import('../pages/exp_jobs.jsx'));
@@ -49,6 +52,14 @@ export default function Router() {
     {
       path: '/connection',
       element: <Connections />,
+    },
+    {
+      path: '/google-connection',
+      element: <GoogleConnections/>,
+    },
+    {
+      path: '/upcoming-alarm',
+      element: <UpcomingAlarm/>,
     },
   ]);
 

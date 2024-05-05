@@ -6,12 +6,9 @@ import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <BrowserRouter>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Router />
-    </Suspense>
-      
+      <Suspense fallback={<div>Loading...</div>}>
+        <Router />
+      </Suspense>
     </BrowserRouter>
-  </React.StrictMode>,
 )

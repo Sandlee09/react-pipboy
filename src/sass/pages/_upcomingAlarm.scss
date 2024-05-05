@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+.upcomingAlarm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 40px;
+  width: 100vw;
+  height: 90vh;
+}
+
+.upcomingAlarm-title {
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  padding: 0px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--pip-boy-primary-color);
+}
+
+.bellAnimation img {
+    height: 85px!important;
+    width: auto;
+    filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+}
+
+.upcomingAlarm-option {
+  background-color: green;
+  color: black;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+}
+
+.upcomingAlarm-time {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: fit-content;
+  z-index: 10000;
+  justify-content: center;
+  align-items: center;
+  line-height: 40vh;
+}
+
+.upcomingAlarm-time p{
+  font-family: monospace;
+  font-size: 30vh;
+  font-weight: 800;
+}
+
+.alarm-divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.alarm-divider div {
+  width: 10px;
+  height: 10px;
+  background-color: var(--pip-boy-primary-color);
+  border-radius: 10000px;
+}
+
+.thumbsUp-container img {
+  height: 70vh;
+  width: auto;
+  filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+}
+
+.thumbsUp-title {
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  padding: 0px 10px;
+  font-weight: 700;
+  font-size: 10vh;
+  color: var(--pip-boy-primary-color);
+}

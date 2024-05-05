@@ -26,14 +26,14 @@ const Connection = () => {
         <div className="screen crt-effect">
             <div className="screen-reflection"></div>
             <div className="scan"></div>
-            <div className="settings-container">
+            <header className="settings-container">
                 <div className='settings-title-container'>
                     <h2 className="settings-title">CONNECTION SETUP</h2>
                     <div className='settings-top-border'/>
                 </div>
                 
                 <div className='settings-option-container'>
-                    <div className="settings-option">Hack Google</div>
+                    <div className="settings-option" onClick={() => navigate('/google-connection')}>Hack Google</div>
                     
                 </div>
             
@@ -42,7 +42,7 @@ const Connection = () => {
                     <div className='settings-bottom-border'/>
                 </div>
                 
-            </div>
+            </header>
         </div>
     </div> 
   );
