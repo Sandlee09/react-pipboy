@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+.special-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 10px 40px
+}
+
+.special-left-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+  width: 20vw;
+}
+
+.special-left-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.special-left-container ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding:  5px 10px;
+}
+
+.special-left-container ul .active {
+  background-color: var(--pip-boy-primary-color);
+}
+
+.special-left-container ul .active p {
+  color: black!important;
+}
+
+.special-left-container ul li p {
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.special-right-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 30vw;
+}
+
+.special-right-container p {
+  font-weight: 600;
+  font-size: 10px;
+  text-transform:none;
+}
+
+.special-right-container img {
+  filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+}

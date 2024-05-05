@@ -12,10 +12,10 @@ import diagram from "../img/diagram.png"
 import security from "../img/security.png"
 import gun from "../img/gun.png"
 import helmet from "../img/helmet.png"
-import crosshair from "../img/crosshair-icon.jpg"
-import armor from "../img/armor-icon.jpg"
-import lightning from "../img/lightning-icon.jpg"
-import radiation from "../img/radiation-icon.jpg"
+import crosshair from "../img/dmg-physical.png"
+import armor from "../img/dmg-shield.png"
+import lightning from "../img/dmg-energy.png"
+import radiation from "../img/dmg-radiation.png"
 import InfoBar from '../components/infoBar'
 import { useEffect, useState } from 'react'
 import ActiveItems from '../components/activeItems'
@@ -52,7 +52,6 @@ const StatStatus = () => {
         updateMilitaryTime()
         setInterval(updateMilitaryTime, 20000);
     }, [])
-    console.log(currentTime)
 
     return (
     <section className="core-display core-display-active" id="stat-status-section">
@@ -72,7 +71,7 @@ const StatStatus = () => {
                     </div>
                 </div>
                 <img id="vault-boy-walking"
-                 src={sleepingArmor} 
+                 src={vault_boy_walking} 
                  alt="a fallout vault boy walking"/>
                 <div className='vault-boy-right-container'>
                 <div className="progressBar">
@@ -85,14 +84,7 @@ const StatStatus = () => {
             </div>
            
         </div>
-        {/* <div className="health-gauge-container">
-            <div className="health-gauge health-gauge-top"></div>
-            <div className="health-gauge health-gauge-right-top"></div>
-            <div className="health-gauge health-gauge-right-bottom"></div>
-            <div className="health-gauge health-gauge-bottom"></div>
-            <div className="health-gauge health-gauge-left-bottom"></div>
-            <div className="health-gauge health-gauge-left-top"></div>
-        </div> */}
+
         <div className="info-container">
             <div className="info-icon info-icon-large info-icon-brackets">
                 <img src={gun} alt="brackets"/>

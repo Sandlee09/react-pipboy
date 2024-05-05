@@ -1,8 +1,10 @@
 import { lazy, Suspense } from 'react';
-import { Outlet, Navigate, useRoutes } from 'react-router-dom';
+import { Outlet, useRoutes } from 'react-router-dom';
 
 import DashboardLayout from '../App.jsx';
 
+export const Special = lazy(() => import('../pages/special.jsx'));
+export const Perks = lazy(() => import('../pages/perks.jsx'));
 export const StatStatus = lazy(() => import('../pages/stat_status.jsx'));
 export const ExpJobs = lazy(() => import('../pages/exp_jobs.jsx'));
 export const Maps = lazy(() => import('../pages/map.jsx'));
@@ -24,6 +26,8 @@ export default function Router() {
       ),
       children: [
         { path: 'stat-status', element: <StatStatus /> },
+        { path: 'special', element: <Special/> },
+        { path: 'perks', element: <Perks/> },
         { path: 'exp-jobs-section', element: <ExpJobs /> },
         { path: 'map-section', element: <Maps /> },
         { path: 'radio', element: <Radio /> },

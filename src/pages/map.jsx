@@ -20,6 +20,34 @@ const Map = () => {
     setScale(newScale)
   };
 
+  const handleTouchStart = (e) => {
+    if (e.touches.length === 2) {
+      const distance = Math.hypot(
+        e.touches[0].pageX - e.touches[1].pageX,
+        e.touches[0].pageY - e.touches[1].pageY
+      );
+      setLastTouchDistance(distance);
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    if (e.touches.length === 2 && lastTouchDistance !== null) {
+      e.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
+
+      const distance = Math.hypot(
+        e.touches[0].pageX - e.touches[1].pageX,
+        e.touches[0].pageY - e.touches[1].pageY
+      );
+      const newScale = scale * (distance / lastTouchDistance);
+      setScale(newScale);
+      setLastTouchDistance(distance);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setLastTouchDistance(null);
+  };
+
   return (
     <section className="core-display" id="map-section" ref={containerRef}>
       <div
@@ -39,6 +67,9 @@ const Map = () => {
                 alt="a map of Ile-de-France french region"
                 
                 onWheel={handleWheel}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
                 style={{
                 transformOrigin: 'top left',
                 overflow: 'visible',
