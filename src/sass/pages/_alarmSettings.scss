@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins";
+
+
+.newAlarm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px
+}
+
+.fallout-time-container {
+  display: flex;
+}
+
+.fallout-name {
+  font-family: "FalloutFont", monospace;
+  font-size: 48px;
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  width: fit-content;
+  max-width: fit-content;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.fallout-number {
+  font-family: "FalloutFont", monospace;
+  font-size: 48px;
+  font-weight: 700;
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  width: fit-content;
+  max-width: fit-content;
+  border: 0px;
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colon {
+  margin: 0 10px;
+}
+
+.add-alarm-button {
+  font-size: 18px;
+  height: fit-content;
+  border-radius: 0px;
+  color: black;
+  font-weight: 700;
+  background-color: var(--pip-boy-primary-color);
+}
+
+.addAlarm-title {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-alarm-button-small {
+  font-size: 8px;
+  height: fit-content;
+  border-radius: 0px;
+  color: black;
+  font-weight: 700;
+  background-color: var(--pip-boy-primary-color);
+}
+
+.alarms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.alarms-listItem  {
+  font-family: "FalloutFont", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00ff00;
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.alarms-listItem button {
+  font-family: "FalloutFont", monospace;
+  font-size: 12px;
+  background-color: #00ff00;
+  color: black;
+  border-radius: 0px;
+  font-weight: 700;
+  max-height: 50px;
+  height: 25px;
+  padding: 0px 10px!important;
+}

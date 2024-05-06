@@ -2,10 +2,11 @@ import { lazy, Suspense } from 'react';
 import { Outlet, useRoutes } from 'react-router-dom';
 
 import DashboardLayout from '../App.jsx';
-import Terminal from '../components/terminal.jsx';
 
+export const AlarmSettings = lazy(() => import('../pages/alarmSetting.jsx'));
 export const UpcomingAlarm = lazy(() => import('../pages/upcomingAlarm.jsx'));
 export const Special = lazy(() => import('../pages/special.jsx'));
+export const ScreenSize = lazy(() => import('../pages/screenSize.jsx'));
 export const Perks = lazy(() => import('../pages/perks.jsx'));
 export const Settings = lazy(() => import('../pages/settings.jsx'));
 export const Connections = lazy(() => import('../pages/connection.jsx'));
@@ -48,6 +49,14 @@ export default function Router() {
     {
       path: '/settings',
       element: <Settings />,
+    },
+    {
+      path: '/screen-size',
+      element: <ScreenSize/>,
+    },
+    {
+      path: '/alarm-settings',
+      element: <AlarmSettings/>,
     },
     {
       path: '/connection',

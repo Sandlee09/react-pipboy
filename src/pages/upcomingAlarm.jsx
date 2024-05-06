@@ -1,17 +1,55 @@
 
-import {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import Bell from '../img/bell.gif'
 import ThumbsUp from '../img/vault-boy/thumbs-up.png'
+import OnlyYou from '../assets/playlist/Only You.mp3'
 
-const UpcomingAlarm = ({title="Alarm", hours = '00', minutes = '00'}) => {
+const UpcomingAlarm = () => {
     const navigate = useNavigate()
+    const [searchParams] = useSearchParams()
     const [isSnoozed, setIsSnoozed] = useState(false);
+    const [snoozeCountdown, setSnoozeCountdown] = useState(60);
+    const [title, setTitle] = useState('')
+    const [hours, setHours] = useState('00')
+    const [minutes, setMinutes] = useState('00')
 
     const handleSnooze = () => {
         setIsSnoozed(true)
-        setTimeout(() => navigate('/stat-status'), 5000);
+        setSnoozeCountdown(60)
     }
+
+    useEffect(() => {
+        var audio = document.getElementById('audio-element');
+        audio?.play();
+    }, [])
+
+    useEffect(() => {
+        setTitle(searchParams.get('name'))
+        setHours(searchParams.get('hour'))
+        setMinutes(searchParams.get('minute'))
+    }, [])
+
+    useEffect(() => {
+        let countdownInterval;
+      
+        if (isSnoozed) {
+          countdownInterval = setInterval(() => {
+            setSnoozeCountdown((prevCountdown) => {
+              if (prevCountdown === 1) {
+                setIsSnoozed(false);
+                navigate('/stat-status');
+                clearInterval(countdownInterval);
+                return 60; // Reset countdown to 60 seconds
+              } else {
+                return prevCountdown - 1;
+              }
+            });
+          }, 1000);
+        }
+      
+        return () => clearInterval(countdownInterval);
+      }, [isSnoozed, navigate]);
 
     return isSnoozed ? (
         <div className="container">
@@ -24,6 +62,7 @@ const UpcomingAlarm = ({title="Alarm", hours = '00', minutes = '00'}) => {
                 </div>
                 <div className='upcomingAlarm-title-container'>
                     <h2 className="thumbsUp-title">Crisis Averted!</h2>
+                    <h4 className="thumbsUp-countdown">Resetting in: {snoozeCountdown}secs</h4>
                     <div className='upcomingAlarm-top-border'/>
                 </div>
             </header>
@@ -56,7 +95,9 @@ const UpcomingAlarm = ({title="Alarm", hours = '00', minutes = '00'}) => {
                 <div className='upcomingAlarm-option-container'>
                     <div className="upcomingAlarm-option" onClick={handleSnooze}>Snooze</div>
                 </div>
-            
+                <audio id="audio-element" autoplay loop>
+                    <source src={OnlyYou} type="audio/mp3"/>
+                </audio>
                 
             </header>
         </div>
