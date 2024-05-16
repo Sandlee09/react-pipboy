@@ -17,8 +17,8 @@
 .fallout-name {
   font-family: "FalloutFont", monospace;
   font-size: 48px;
-  color: #00ff00;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  color: var(--pip-boy-primary-color);
+  text-shadow: 0 0 10px var(--pip-boy-primary-color);
   width: fit-content;
   max-width: fit-content;
   border: 0px;
@@ -32,8 +32,8 @@
   font-family: "FalloutFont", monospace;
   font-size: 48px;
   font-weight: 700;
-  color: #00ff00;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  color: var(--pip-boy-primary-color);
+  text-shadow: 0 0 10px var(--pip-boy-primary-color);
   width: fit-content;
   max-width: fit-content;
   border: 0px;
@@ -57,6 +57,7 @@
 }
 
 .addAlarm-title {
+  color: var(--pip-boy-primary-color);
   display: flex;
   align-items: center;
   margin: auto;
@@ -89,7 +90,7 @@
   font-family: "FalloutFont", monospace;
   font-size: 24px;
   font-weight: 700;
-  color: #00ff00;
+  color: var(--pip-boy-primary-color);
   display: flex;
   align-items: center;
   gap: 10px
@@ -98,7 +99,7 @@
 .alarms-listItem button {
   font-family: "FalloutFont", monospace;
   font-size: 12px;
-  background-color: #00ff00;
+  background-color: var(--pip-boy-primary-color);
   color: black;
   border-radius: 0px;
   font-weight: 700;

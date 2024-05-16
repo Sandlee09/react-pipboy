@@ -64,6 +64,8 @@ const color_themes = [green_default, blue_nuka_cola, orange_mojave, purple, red,
 function activeColor(box, boxes, color_themes,
                      box_class_basename, active_box_class,
                      info_images, menu_images, vault_boy_walking_image, idf_map_image) {
+    console.log('testing22222222')
+    
     for (let i=0 ; i < boxes.length ; i++) {
         boxes[i].classList.remove(active_box_class);
     }
@@ -74,6 +76,8 @@ function activeColor(box, boxes, color_themes,
             // setting text colors
             document.documentElement.style.setProperty('--pip-boy-primary-color', color_themes[i][1]);
             document.documentElement.style.setProperty('--pip-boy-secondary-color', color_themes[i][2]);
+            document.documentElement.style.setProperty('--pip-boy-filter-images', color_themes[i][3]);
+            document.documentElement.style.setProperty('--pip-boy-filter', color_themes[i][5]);
             // setting info_images colors with filter CSS property
             for (let j=0 ; j < info_images.length ; j++) {
                 info_images[j].style.removeProperty('filter');
@@ -90,11 +94,11 @@ function activeColor(box, boxes, color_themes,
                 header_lines[j].style.setProperty('filter', color_themes[i][3]);
             }
             // setting vault boy image color with filter CSS property
-            vault_boy_walking_image.style.removeProperty('filter');
-            vault_boy_walking_image.style.setProperty('filter', color_themes[i][5]);
+            vault_boy_walking_image?.style.removeProperty('filter');
+            vault_boy_walking_image?.style.setProperty('filter', color_themes[i][5]);
             // setting idf map image color with filter CSS property
-            idf_map_image.style.removeProperty('filter');
-            idf_map_image.style.setProperty('filter', color_themes[i][4]);
+            idf_map_image?.style.removeProperty('filter');
+            idf_map_image?.style.setProperty('filter', color_themes[i][4]);
         }
     }
 }

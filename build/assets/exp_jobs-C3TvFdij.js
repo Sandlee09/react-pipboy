@@ -1,1 +1,0 @@
-import{j as s}from"./index-B6Q55f2h.js";const o=()=>s.jsx("section",{className:"core-display",id:"exp-jobs-section",children:s.jsx("div",{className:"menu-container job-container"})});export{o as default};

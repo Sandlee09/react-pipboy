@@ -35,6 +35,7 @@
   text-align: center;
   background-color: #0F160E;
   position: relative;
+  color: var(--pip-boy-primary-color);
   padding: 0px 10px;
   font-weight: 700;
   font-size: 16px;
@@ -43,6 +44,7 @@
 .settings-subtitle {
   font-size: 12px;
   margin-bottom: 10px;
+  color: var(--pip-boy-primary-color);
 }
 
 .settings-option-container {
@@ -53,7 +55,7 @@
 }
 
 .settings-option {
-  background-color: green;
+  background-color: var(--pip-boy-primary-color);
   color: black;
   padding: 10px;
   margin-bottom: 10px;
@@ -69,7 +71,7 @@
 }
 
 .settings-subOption {
-  background-color: green;
+  background-color: var(--pip-boy-primary-color);;
   color: black;
   border: none;
   padding: 10px 20px;

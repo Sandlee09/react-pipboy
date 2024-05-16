@@ -14,7 +14,7 @@
 #vault-boy-walking {
   max-height: 174px;
   margin-top: 1rem;
-  filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+  filter: var(--pip-boy-filter)
 }
 
 .info-icon-web,
@@ -54,11 +54,13 @@
 .info-icon-large > img {
   width: 4rem;
   height: 4rem;
+  filter: var(--pip-boy-filter-images);
 }
 
 .info-icon-thin > img {
   width: 2rem;
   height: 2rem;
+  filter: var(--pip-boy-filter-images);
 }
 
 .info-icon-thin > p {
@@ -91,7 +93,8 @@
 
 .active-item-bar {
   padding: 3px 10px;
-  background-color: rgb(54, 109, 16);
+  background-color: var(--pip-boy-primary-color);
+  opacity: 0.4;
   font-size: 10px;
   font-weight: 700;
   width: fit-content;
@@ -101,7 +104,7 @@
 }
 
 .active-item-bar p {
-  color: rgb(33, 71, 5)!important;
+  color: var(--pip-boy-secondary-color)!important;
 }
 
 .info-bar-container {
@@ -116,7 +119,8 @@
 
 .info-bar {
   padding: 3px 10px;
-  background-color: #103A0F;
+  // background-color: #103A0F;
+  background-color: var(--pip-boy-secondary-color);
   font-size: 12px;
   font-weight: 700;
   color: var(--pip-boy-primary-color);

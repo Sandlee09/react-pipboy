@@ -39,13 +39,13 @@ export default function Router() {
         { path: 'exp-jobs-section', element: <ExpJobs /> },
         { path: 'map-section', element: <Maps /> },
         { path: 'radio', element: <Radio /> },
-        { path: 'color-section', element: <ColorSettings /> },
       ],
     },
     {
       path: '/',
       element: <StartupVideo />,
     },
+    { path: '/color-settings', element: <ColorSettings /> },
     {
       path: '/settings',
       element: <Settings />,

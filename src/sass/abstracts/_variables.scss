@@ -2,6 +2,9 @@
   --pip-boy-primary-color: #18dc0c;
   --pip-boy-secondary-color: #11291b;
   --pip-boy-background-color: #10170f;
+  --pip-boy-terciary-color: rgb(54, 109, 16);
+  --pip-boy-filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(50deg) saturate(1500%) contrast(0.99);
+  --pip-boy-filter-images: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(50deg) saturate(1000%) contrast(0.8);
 }
 
 // 1 rem = 10 px

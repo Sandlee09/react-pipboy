@@ -35,7 +35,7 @@ const Settings = () => {
                 <h2 className="settings-subtitle">Select a Setting</h2>
                 <div className='settings-option-container'>
                     <div className="settings-option" onClick={() => navigate('/screen-size')}>Screen Sizing</div>
-                    <div className="settings-option">Color Settings</div>
+                    <div className="settings-option" onClick={() => navigate('/color-settings')}>Color Settings</div>
                     <div className="settings-option" onClick={() => navigate('/connection')}>Connection</div>
                     <div className="settings-option" onClick={() => navigate('/alarm-settings')}>Alarms</div>
                     {/* <div className='settings-subOptions-container'>
